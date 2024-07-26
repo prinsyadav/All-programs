@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(178, 251, 239);
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+img{
+  float:left;
+  box-shadow: 10px 10px;
+  width:150px;
+  height:170px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+th, td, table{
+  margin: 10px;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: beige;
+}
+
+form{
+  margin-left: 8%;
+  margin-top: 10%;
+}
+
+.firstbox{
+  background-color: rgb(158, 237, 105);
+  border: 1.5px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  align-self: flex-start;
+  box-shadow: 10px 10px;
+  position: relative;
+}
+
+.secondbox{
+  border: 1.5px solid black;
+  box-shadow: 10px 10px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(75, 217, 205);
+  margin: 5px;
+  align-self: flex-start;
+}
+
+.thirdbox{
+  background-color: rgb(136, 179, 232);
+  border: 1.55px solid black;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 10px 10px;
+}
+
+.description{
+  border: 1.5px solid black;
+  border-radius: 10px;
+  background-color: aqua;
+  padding: 5px;
+  overflow: auto;
+}
+
+.container{
+  display: flex;
+}
+
+.allboxcontainer{
+  display:flex;
+  flex-direction: justify-content;
+  /* align-items: baseline; */
+}
+
