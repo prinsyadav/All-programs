@@ -4,14 +4,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Scanner;
+
+//import java.sql.PreparedStatement;
 
 public class UpdateTable {
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
 
-        String url = "jdbc:postgresql://localhost:5432/test";
-        String user = "postgres";
-        String password = "annu";
+
+    public static void updateTable(String url, String user, String password) {
 
         try {
             // Load the PostgreSQL JDBC driver
@@ -22,8 +22,15 @@ public class UpdateTable {
 
             String query = "INSERT INTO kids (name, age) VALUES (?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(query);
-            pstmt.setString(1, "John Doe");
-            pstmt.setInt(2, 30);
+          // take input from user
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the name of the kid: ");
+            String name = sc.nextLine();
+            System.out.println("Enter the age of the kid: ");
+            int age = sc.nextInt();
+            sc.close();
+            pstmt.setString(1, name);
+            pstmt.setInt(2, age);
             pstmt.executeUpdate();
             System.out.println("Table updated successfully.");
         } catch (ClassNotFoundException e) {

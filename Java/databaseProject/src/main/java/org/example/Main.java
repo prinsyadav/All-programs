@@ -28,6 +28,8 @@ public class Main {
             PreparedStatement pstmt = conn.prepareStatement(query);
             pstmt.executeUpdate();
             System.out.println("Table created successfully.");
+            UpdateTable.updateTable(url, user, password);
+
         } catch (ClassNotFoundException e) {
             System.out.println("PostgreSQL JDBC Driver not found. Include it in your library path.");
             e.printStackTrace();
@@ -35,5 +37,32 @@ public class Main {
             System.out.println("Connection failure.");
             e.printStackTrace();
         }
+
+        // take input from user and insert those valuse  into the employee table
+
+        try {
+            // Load the PostgreSQL JDBC driver
+            Class.forName("org.postgresql.Driver");
+
+            Connection conn = DriverManager.getConnection(url, user, password);
+            System.out.println("Connected to the PostgreSQL server successfully.");
+
+            String query = "CREATE TABLE IF NOT EXISTS employee (" +
+                    "name VARCHAR(255), " +
+                    "age INTEGER)";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+
+            pstmt.executeUpdate();
+            System.out.println("Table created successfully.");
+
+
+        } catch (ClassNotFoundException e) {
+            System.out.println("PostgreSQL JDBC Driver not found. Include it in your library path.");
+            e.printStackTrace();
+    }
+    catch (SQLException e) {
+        System.out.println("Connection failure.");
+        e.printStackTrace();
+    }
     }
 }
