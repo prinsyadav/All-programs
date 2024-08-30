@@ -18,10 +18,12 @@ public class arrays{
             System.out.println(arrayName[i]);
         } */
 
+        // Count the number of words in a string
         String words = "One Two Three Four";
         int countWords = words.split("\\s").length;
         System.out.println(countWords);
 
+        // Reverse a string
         String originalStr = "Hello";
         String reversedStr = "";
 
