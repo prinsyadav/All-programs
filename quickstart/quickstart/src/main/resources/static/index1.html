@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In / Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.5rem;
+    }
+    input {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 0.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .toggle {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .toggle a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1 id="formTitle">Sign In</h1>
+  <form id="authForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <div id="nameField" style="display: none;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div class="toggle">
+    <a href="#" id="toggleLink">Don't have an account? Sign up</a>
+  </div>
+</div>
+
+<script>
+  const formTitle = document.getElementById('formTitle');
+  const authForm = document.getElementById('authForm');
+  const nameField = document.getElementById('nameField');
+  const toggleLink = document.getElementById('toggleLink');
+  let isSignIn = true;
+
+  toggleLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    isSignIn = !isSignIn;
+    if (isSignIn) {
+      formTitle.textContent = 'Sign In';
+      nameField.style.display = 'none';
+      toggleLink.textContent = "Don't have an account? Sign up";
+    } else {
+      formTitle.textContent = 'Sign Up';
+      nameField.style.display = 'block';
+      toggleLink.textContent = 'Already have an account? Sign in';
+    }
+  });
+
+  authForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const name = document.getElementById('name').value;
+
+    if (isSignIn) {
+      console.log('Signing in with:', { email, password });
+      // Add your sign-in logic here
+    } else {
+      console.log('Signing up with:', { name, email, password });
+      // Add your sign-up logic here
+    }
+
+    // Reset form after submission
+    authForm.reset();
+  });
+</script>
+</body>
+</html>
