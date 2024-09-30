@@ -1,6 +1,6 @@
-package org.example.simplewebapp.repository;
+package com.prince.database.repo;
 
-import org.example.simplewebapp.model.Product;
+import com.prince.database.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

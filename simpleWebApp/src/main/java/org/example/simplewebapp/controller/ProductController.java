@@ -22,16 +22,16 @@ public class ProductController {
     public Object getProductById(@PathVariable int prodId){
         return productService.getProductById(prodId);
     }
-    // method to create product
+    // method to create productById
     @PostMapping ("/products")
-    public void createProduct(@RequestBody Product product){
-        productService.createProduct(product);
+    public Product createProduct(@RequestBody Product product){
+        return productService.createProduct(product);
     }
 
-    // method to update product
-    @PutMapping ("/products")
-    public void updateProduct(@RequestBody Product product){
-        productService.updateProduct(product);
+    // method to update productById
+    @PutMapping ("/products/{prodId}")
+    public void updateProductById(@PathVariable int prodId, @RequestBody Product product){
+        productService.updateProductById(prodId, product);
     }
 
     // method to delete product

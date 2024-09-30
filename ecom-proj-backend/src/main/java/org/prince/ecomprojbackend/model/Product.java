@@ -1,5 +1,6 @@
 package org.prince.ecomprojbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,7 +17,7 @@ import java.util.Date;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
     @Column(name="description")
     private String desc;
@@ -26,4 +27,9 @@ public class Product {
     private Date releaseDate;
     private boolean available;
     private int quantity;
+
+//    private String imageName;
+//    private String imageType;
+//    @Lob
+//    private byte[] imageDate;
 }
