@@ -17,7 +17,7 @@ public class ProductService {
         return repo.findAll();
     }
 
-    public Product getProductById(Long id) {
+    public Product getProductById(int id) {
         return repo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Product not found with id: " + id));
     }
@@ -26,7 +26,7 @@ public class ProductService {
     public Product saveProduct(Product product) {
         return repo.save(product);
     }
-
+}
 //    public Product addProduct(Product product, MultipartFile imageFile) {
 //        product.setImageName(imageFile.getOriginalFilename());
 //        product.setImageType(imageFile.getContentType());
@@ -37,4 +37,4 @@ public class ProductService {
 //        }
 //        return repo.save(product);
 //    }
-}
+

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MaximumSubarray",
+            "request": "launch",
+            "mainClass": "DSA.MaximumSubarray",
+            "projectName": "Programming_11e76ca0"
+        },
+        {
+            "type": "java",
             "name": "table",
             "request": "launch",
             "mainClass": "table",

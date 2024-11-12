@@ -29,12 +29,12 @@ public class ProductController {
     }
 
     @GetMapping("/product/{id}")
-    public Product getProductById(@PathVariable Long id){
+    public Product getProductById(@PathVariable int id){
         return service.getProductById(id);
     }
 
-    @PostMapping("/product")
-    public Product saveProduct(@RequestBody Product product){
+    @PostMapping("/product/{id}")
+    public Product saveProduct(@PathVariable int id, @RequestBody Product product){
         return service.saveProduct(product);
     }
 
