@@ -12,6 +12,7 @@ function UserList() {
   const fetchUsers = async () => {
     try {
       const response = await fetch('http://localhost:8080/users');
+      // fetch image data for each user
       const data = await response.json();
       setUsers(data.sort((a, b) => a.id - b.id));
     } catch (error) {
@@ -36,9 +37,9 @@ function UserList() {
     try {
       const response = await fetch(`http://localhost:8080/users/${editingUser.id}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Content-Type': 'json/application',
+        // },
         body: JSON.stringify(editingUser)
       });
 
@@ -62,6 +63,7 @@ function UserList() {
             <th>Image</th>
             <th>ID</th>
             <th>Username</th>
+            <th>Password</th>
             <th>Email</th>
             <th>Country</th>
           </tr>
@@ -80,6 +82,7 @@ function UserList() {
               </td>
               <td>{user.id}</td>
               <td>{user.username}</td>
+              <td>{user.password}</td>
               <td>{user.email}</td>
               <td>{user.country}</td>
             </tr>
@@ -91,11 +94,29 @@ function UserList() {
         <form onSubmit={handleSubmit}>
           <h2>Edit User</h2>
           <div>
+            <label>ID:</label>
+            <input
+              type="text"
+              name="id"
+              value={editingUser.id}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
             <label>Username:</label>
             <input
               type="text"
               name="username"
               value={editingUser.username}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              name="password"
+              value={editingUser.password}
               onChange={handleInputChange}
             />
           </div>
@@ -117,7 +138,7 @@ function UserList() {
               onChange={handleInputChange}
             />
           </div>
-          <button type="submit">Update User</button>
+          <button type="submit" onClick={}>Update User</button>
           <button type="button" onClick={() => setEditingUser(null)}>Cancel</button>
         </form>
       )}
