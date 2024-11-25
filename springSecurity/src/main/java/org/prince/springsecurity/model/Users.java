@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+
 @Data
 @Entity
 @AllArgsConstructor
@@ -19,12 +21,6 @@ public class Users {
     private String password;
     private String email;
     private String country;
-    @Lob
-    @Basic(fetch = FetchType.LAZY)
-    @Column(name = "image_data", columnDefinition = "bytea")
-    private byte[] imageData;
+    private String filepath;
 
-    public byte[] getImage() {
-        return imageData;
-    }
 }
