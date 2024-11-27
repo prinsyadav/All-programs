@@ -16,6 +16,7 @@ import java.io.File;
 @Table(name = "users")
 public class Users {
     @Id
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "users-sequences")
     private int id;
     private String username;
     private String password;

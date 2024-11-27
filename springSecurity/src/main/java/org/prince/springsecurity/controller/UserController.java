@@ -26,10 +26,18 @@ public class UserController {
     public List<Users> getUsers(){
         return userService.getUsers();
     }
-
+    // Controller method to get user by id
+    @GetMapping("/users/{id}")
+    public ResponseEntity<?> getUserById(@PathVariable int id) {
+        Object user = userService.getUserById(id);
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        }
+        return ResponseEntity.ok(user);
+    }
 
     //method to get image by id
-    @GetMapping("/users/{id}")
+    @GetMapping("/users/image/{id}")
     public void fetchImage(@PathVariable int id, HttpServletResponse response) throws IOException {
         byte[] image = userService.fetchImage(id);
         if (image == null) {
@@ -48,14 +56,6 @@ public class UserController {
             @PathVariable int id,
             @ModelAttribute Users users,
             @RequestParam("file") MultipartFile file) throws IOException {
-
-//        Users user = new Users();
-//        user.setId(users.getId());
-//        user.setUsername(users.getUsername());
-//        user.setPassword(users.getPassword());
-//        user.setEmail(users.getEmail());
-//        user.setCountry(users.getCountry());
-//        user.setFilepath("D:\\Programming\\imageData\\" + file.getOriginalFilename());
 
         Users updatedUser = userService.updateUser(id, users, file);
         if (updatedUser == null) {
@@ -78,5 +78,12 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Failed to create user: " + e.getMessage());
         }
+    }
+
+    // method to delete user by id
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable int id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok("User deleted successfully");
     }
 }

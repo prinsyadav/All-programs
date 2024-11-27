@@ -25,7 +25,7 @@ public class UserService {
     }
     // method to create user
      public Users createUser(Users users, MultipartFile file) throws IOException {
-        users.setId(users.getId());
+        users.setId(0);
         users.setUsername(users.getUsername());
         users.setPassword(users.getPassword());
         users.setEmail(users.getEmail());
@@ -42,8 +42,6 @@ public class UserService {
         if (user == null) {
             return null;
         }
-
-//        user.setId(users.getId());
         user.setUsername(users.getUsername());
         user.setPassword(users.getPassword());
         user.setEmail(users.getEmail());
@@ -73,5 +71,10 @@ public class UserService {
             return null;
         }
 
+    }
+
+    // method to delete user by id
+    public void deleteUser(int id) {
+        userRepo.deleteById(id);
     }
 }
