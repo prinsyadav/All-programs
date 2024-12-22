@@ -23,6 +23,7 @@ public class UserService {
     public List<Users> getUsers() {
         return userRepo.findAll();
     }
+
     // method to create user
      public Users createUser(Users users, MultipartFile file) throws IOException {
         users.setId(users.getId());

@@ -21,7 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-//     method to get all users
+    //     method to get all users
     @GetMapping("/users")
     public List<Users> getUsers(){
         return userService.getUsers();
@@ -46,8 +46,8 @@ public class UserController {
     @PutMapping(value = "/users/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<Users> updateUser(
             @PathVariable int id,
-            @ModelAttribute Users users,
-            @RequestParam("file") MultipartFile file) throws IOException {
+            @RequestPart Users users,
+            @RequestPart("file") MultipartFile file) throws IOException {
 
 //        Users user = new Users();
 //        user.setId(users.getId());
@@ -79,4 +79,15 @@ public class UserController {
                     .body("Failed to create user: " + e.getMessage());
         }
     }
+<<<<<<< Updated upstream
+=======
+
+    // method to delete user by id
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable int id) {
+        userService.deleteUser(id);
+        return ResponseEntity.ok("User deleted successfully");
+    }
+
+>>>>>>> Stashed changes
 }

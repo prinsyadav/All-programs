@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
+
 
 @Data
 @Entity
@@ -16,7 +16,12 @@ import java.io.File;
 @Table(name = "users")
 public class Users {
     @Id
+<<<<<<< Updated upstream
     private int id;
+=======
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id; 
+>>>>>>> Stashed changes
     private String username;
     private String password;
     private String email;
