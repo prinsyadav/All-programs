@@ -25,10 +25,10 @@
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-  
+
 //     try {
 //       const formDataWithImage = new FormData();
-  
+
 //       // Append JSON data as 'users'
 //       formDataWithImage.append(
 //         'users',
@@ -40,7 +40,7 @@
 //           country: formData.country,
 //         })], { type: 'application/json' })
 //       );
-  
+
 //       // Append the image file as 'imageData'
 //       if (selectedImage) {
 //         formDataWithImage.append('imageData', selectedImage);
@@ -48,12 +48,12 @@
 //         alert('Please select an image.');
 //         return;
 //       }
-  
+
 //       const response = await fetch('http://localhost:8080/users', {
 //         method: 'POST',
 //         body: formDataWithImage,
 //       });
-  
+
 //       if (response.ok) {
 //         alert('User added successfully!');
 //         setFormData({
@@ -73,7 +73,7 @@
 //       alert('Error adding user');
 //     }
 //   };
-  
+
 //   return (
 //     <form onSubmit={handleSubmit}>
 //       <div className="form-group">
@@ -149,92 +149,97 @@
 
 // export default AddUser;
 
-import React, { useState } from 'react';
-import axios from 'axios'; // Recommended for handling form data
+import React, { useState } from "react";
+import axios from "axios"; // Recommended for handling form data
 
 function AddUser() {
-   const [formData, setFormData] = useState({
-      id: '',
-     username: '',
-     password: '',
-     email: '',
-     country: '',
-     image: null
-   });
+  const [formData, setFormData] = useState({
+    id: "",
+    username: "",
+    password: "",
+    email: "",
+    country: "",
+    image: null,
+  });
 
-   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-   const handleChange = (e) => {
-     setFormData({
-       ...formData,
-       [e.target.name]: e.target.value
-     });
-   };
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-   const handleImageChange = (e) => {
-     setSelectedImage(e.target.files[0]);
-   };
+  const handleImageChange = (e) => {
+    setSelectedImage(e.target.files[0]);
+  };
 
-   const handleSubmit = async (e) => {
-     e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-     try {
-       // Create FormData object
-       const formDataToSubmit = new FormData();
+    try {
+      // Create FormData object
+      const formDataToSubmit = new FormData();
 
-       // Create user object
-       const userObject = {
-         id: formData.id,
-         username: formData.username,
-         password: formData.password,
-         email: formData.email,
-         country: formData.country
-       };
+      // Create user object
+      const userObject = {
+        id: formData.id,
+        username: formData.username,
+        password: formData.password,
+        email: formData.email,
+        country: formData.country,
+      };
 
-       // Append user object as JSON
-       formDataToSubmit.append('users', 
-         new Blob([JSON.stringify(userObject)], { type: 'application/json' })
-       );
+      // Append user object as JSON
+      formDataToSubmit.append(
+        "users",
+        new Blob([JSON.stringify(userObject)], { type: "application/json" })
+      );
 
-       // Append image file
-       if (selectedImage) {
-         formDataToSubmit.append('file', selectedImage);
-       } else {
-         alert('Please select an image.');
-         return;
-       }
+      // Append image file
+      if (selectedImage) {
+        formDataToSubmit.append("file", selectedImage);
+      } else {
+        alert("Please select an image.");
+        return;
+      }
 
-       // Send request using axios for better handling
-       const response = await axios.post('http://localhost:8080/users', formDataToSubmit, {
-         headers: {
-           'Content-Type': 'multipart/form-data'
-         }
-       });
+      // Send request using axios for better handling
+      const response = await axios.post(
+        "http://localhost:8080/users",
+        formDataToSubmit,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
-       if (response.status === 200) {
-         alert('User added successfully!');
-         // Reset form
-         setFormData({
-            id: '',
-           username: '',
-           password: '',
-           email: '',
-           country: '',
-           image: null
-         });
-         setSelectedImage(null);
-       }
-     } catch (error) {
-       console.error('Error adding user:', error);
-       alert('Error adding user: ' + error.message);
-     }
-   };
+      if (response.status === 200) {
+        alert("User added successfully!");
+        // Reset form
+        setFormData({
+          id: "",
+          username: "",
+          password: "",
+          email: "",
+          country: "",
+          image: null,
+        });
+        setSelectedImage(null);
+      }
+    } catch (error) {
+      console.error("Error adding user:", error);
+      alert("Error adding user: " + error.message);
+    }
+  };
 
-   return (
-     <form onSubmit={handleSubmit}>
-       <div className="form-group">
-         <label>Profile Image:</label>
-         <input
+  return (
+    <form onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label>Profile Image:</label>
+        <input
           type="file"
           accept="image/*"
           onChange={handleImageChange}
@@ -244,11 +249,11 @@ function AddUser() {
           <img
             src={URL.createObjectURL(selectedImage)}
             alt="Preview"
-            style={{ width: '100px', marginTop: '10px' }}
+            style={{ width: "100px", marginTop: "10px" }}
           />
         )}
       </div>
-       <div className="form-group">
+      <div className="form-group">
         <label>ID:</label>
         <input
           type="integer"
@@ -257,7 +262,7 @@ function AddUser() {
           onChange={handleChange}
           required
         />
-      </div> 
+      </div>
       <div className="form-group">
         <label>Username:</label>
         <input
@@ -299,8 +304,8 @@ function AddUser() {
         />
       </div>
       <button type="submit">Submit</button>
-     </form>
-   );
+    </form>
+  );
 }
 
 export default AddUser;

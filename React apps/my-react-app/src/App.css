@@ -59,9 +59,8 @@
 }
 
 #navBar {
-  display:grid;
+  display: grid;
   justify-content: center;
-  align-items:first baseline;
+  align-items: first baseline;
   margin: 20px;
 }
-

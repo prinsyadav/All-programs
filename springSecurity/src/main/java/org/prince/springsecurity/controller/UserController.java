@@ -49,13 +49,13 @@ public class UserController {
             @RequestPart Users users,
             @RequestPart("file") MultipartFile file) throws IOException {
 
-//        Users user = new Users();
-//        user.setId(users.getId());
-//        user.setUsername(users.getUsername());
-//        user.setPassword(users.getPassword());
-//        user.setEmail(users.getEmail());
-//        user.setCountry(users.getCountry());
-//        user.setFilepath("D:\\Programming\\imageData\\" + file.getOriginalFilename());
+        Users user = new Users();
+        user.setId(users.getId());
+        user.setUsername(users.getUsername());
+        user.setPassword(users.getPassword());
+        user.setEmail(users.getEmail());
+        user.setCountry(users.getCountry());
+        user.setFilepath("D:\\Programming\\imageData\\" + file.getOriginalFilename());
 
         Users updatedUser = userService.updateUser(id, users, file);
         if (updatedUser == null) {
@@ -79,15 +79,14 @@ public class UserController {
                     .body("Failed to create user: " + e.getMessage());
         }
     }
-<<<<<<< Updated upstream
-=======
+
 
     // method to delete user by id
-    @DeleteMapping("/users/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable int id) {
-        userService.deleteUser(id);
-        return ResponseEntity.ok("User deleted successfully");
-    }
+//    @DeleteMapping("/users/{id}")
+//    public ResponseEntity<?> deleteUser(@PathVariable int id) {
+//        userService.deleteUser(id);
+//        return ResponseEntity.ok("User deleted successfully");
+//    }
 
->>>>>>> Stashed changes
+
 }

@@ -16,12 +16,8 @@ import org.springframework.stereotype.Component;
 @Table(name = "users")
 public class Users {
     @Id
-<<<<<<< Updated upstream
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-=======
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id; 
->>>>>>> Stashed changes
     private String username;
     private String password;
     private String email;

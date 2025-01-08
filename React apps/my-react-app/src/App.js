@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import React,{ useEffect, useState } from 'react';
+import "./App.css";
+import React, { useEffect, useState } from "react";
 
 // function App() {
 //   return (
@@ -24,11 +23,7 @@ import React,{ useEffect, useState } from 'react';
 // }
 
 function MyButton() {
-  return (
-    <button>
-      I'm a button
-    </button>
-  );
+  return <button>I'm a button</button>;
 }
 
 // Create a navigation bar component which will have 3 links
@@ -58,7 +53,7 @@ function Article() {
         <li>Using a Component</li>
       </ol>
     </article>
-    );
+  );
 }
 
 function FavoriteColor() {
@@ -67,22 +62,18 @@ function FavoriteColor() {
   return (
     <>
       <h1>My favorite color is {color}!</h1>
-      <button
-        type="button"
-        onClick={() => setColor("blue")}
-      >Blue</button>
-      <button
-        type="button"
-        onClick={() => setColor("red")}
-      >Red</button>
-      <button
-        type="button"
-        onClick={() => setColor("pink")}
-      >Pink</button>
-      <button
-        type="button"
-        onClick={() => setColor("green")}
-      >Green</button>
+      <button type="button" onClick={() => setColor("blue")}>
+        Blue
+      </button>
+      <button type="button" onClick={() => setColor("red")}>
+        Red
+      </button>
+      <button type="button" onClick={() => setColor("pink")}>
+        Pink
+      </button>
+      <button type="button" onClick={() => setColor("green")}>
+        Green
+      </button>
     </>
   );
 }
@@ -92,14 +83,14 @@ function Car() {
     brand: "Ford",
     model: "Mustang",
     year: "1964",
-    color: "red"
+    color: "red",
   });
 
   const updateColor = () => {
-    setCar(previousState => {
-      return { ...previousState, color: "blue" }
+    setCar((previousState) => {
+      return { ...previousState, color: "blue" };
     });
-  }
+  };
 
   return (
     <>
@@ -107,12 +98,11 @@ function Car() {
       <p>
         It is a {car.color} {car.model} from {car.year}.
       </p>
-      <button
-        type="button"
-        onClick={updateColor}
-      >Blue</button>
+      <button type="button" onClick={updateColor}>
+        Blue
+      </button>
     </>
-  )
+  );
 }
 
 // function Timer() {
@@ -129,62 +119,60 @@ function Car() {
 //     );
 // }
 
-function Component1() {
-  const [user, setUser] = useState("Jesse Hall");
+// function Component1() {
+//   const [user, setUser] = useState("Jesse Hall");
 
-  return (
-    <>
-      <h1>{`Hello ${user}!`}</h1>
-      <Component2 user={user} />
-    </>
-  );
-}
+//   return (
+//     <>
+//       <h1>{`Hello ${user}!`}</h1>
+//       <Component2 user={user} />
+//     </>
+//   );
+// }
 
-function Component2({ user }) {
-  return (
-    <>
-      <h1>Component 2</h1>
-      <Component3 user={user} />
-    </>
-  );
-}
+// function Component2({ user }) {
+//   return (
+//     <>
+//       <h1>Component 2</h1>
+//       <Component3 user={user} />
+//     </>
+//   );
+// }
 
-function Component3({ user }) {
-  return (
-    <>
-      <h1>Component 3</h1>
-      <Component4 user={user} />
-    </>
-  );
-}
+// function Component3({ user }) {
+//   return (
+//     <>
+//       <h1>Component 3</h1>
+//       <Component4 user={user} />
+//     </>
+//   );
+// }
 
-function Component4({ user }) {
-  return (
-    <>
-      <h1>Component 4</h1>
-      <Component5 user={user} />
-    </>
-  );
-}
+// function Component4({ user }) {
+//   return (
+//     <>
+//       <h1>Component 4</h1>
+//       <Component5 user={user} />
+//     </>
+//   );
+// }
 
-function Component5({ user }) {
-  return (
-    <>
-      <h1>Component 5</h1>
-      <h2>{`Hello ${user} again!`}</h2>
-    </>
-  );
-}
+// function Component5({ user }) {
+//   return (
+//     <>
+//       <h1>Component 5</h1>
+//       <h2>{`Hello ${user} again!`}</h2>
+//     </>
+//   );
+// }
 
-function Textbox(){
-  return(
-    <input type="text" placeholder="Enter your name"/>
-  );
+function Textbox() {
+  return <input type="text" placeholder="Enter your name" />;
 }
 
 function Textbox1() {
-  const [inputText, setInputText] = useState('');
-  const [savedText, setSavedText] = useState('');
+  const [inputText, setInputText] = useState("");
+  const [savedText, setSavedText] = useState("");
 
   const saveText = () => {
     setSavedText(inputText);
@@ -195,12 +183,12 @@ function Textbox1() {
   };
 
   return (
-    <div style={{ display: 'flex', gap: '20px', alignItems: 'start' }}>
+    <div style={{ display: "flex", gap: "20px", alignItems: "start" }}>
       <div>
-        <textarea 
-          id="textInput" 
-          rows="5" 
-          cols="50" 
+        <textarea
+          id="textInput"
+          rows="5"
+          cols="50"
           placeholder="Enter your text here"
           value={inputText}
           onChange={handleInputChange}
@@ -208,12 +196,12 @@ function Textbox1() {
         <br />
         <button onClick={saveText}>Save</button>
       </div>
-      <div 
-        style={{ 
-          border: '1px solid #ccc', 
-          padding: '10px', 
-          minHeight: '100px', 
-          minWidth: '200px' 
+      <div
+        style={{
+          border: "1px solid #ccc",
+          padding: "10px",
+          minHeight: "100px",
+          minWidth: "200px",
         }}
       >
         {savedText}
@@ -225,19 +213,18 @@ function Textbox1() {
 function App() {
   return (
     <div class="mainFunction">
-      <h1>Welcome to my app</h1>  
+      <h1>Welcome to my app</h1>
       <MyButton />
       <Article />
       <NavBar />
       <FavoriteColor />
       <Car />
       {/* <Timer /> */}
-      <Component1/>
-      <Textbox/>
-      <Textbox1/>
+      {/* <Component1 /> */}
+      <Textbox />
+      <Textbox1 />
     </div>
   );
 }
 
 export default App;
-
