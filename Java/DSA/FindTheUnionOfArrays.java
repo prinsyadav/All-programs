@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Scanner;
 
 public class FindTheUnionOfArrays {
         
@@ -28,6 +29,39 @@ public class FindTheUnionOfArrays {
 
         // Optimized approach
         
+        public static ArrayList<Integer> findUnion(int[] arr1, int[] arr2) {
+            HashSet<Integer> set = new HashSet<Integer>();
+            ArrayList<Integer> union = new ArrayList<Integer>();
+            int i=0, j=0;
+            while(i<arr1.length && j<arr2.length){
+                if(arr1[i] < arr2[j]){
+                    set.add(arr1[i]);
+                    i++;
+                }
+                else if(arr1[i] > arr2[j]){
+                    set.add(arr2[j]);
+                    j++;
+                }
+                else{
+                    set.add(arr1[i]);
+                    i++;
+                    j++;
+                }
+            }
+            while(i<arr1.length){
+                set.add(arr1[i]);
+                i++;
+            }
+            while(j<arr2.length){
+                set.add(arr2[j]);
+                j++;
+            }
+            for(int it : set){
+                union.add(it);
+            }
+            return union;
+        }
+        
             
         public static void main(String[] args){
             FindTheUnionOfArrays obj = new FindTheUnionOfArrays();
@@ -47,9 +81,9 @@ public class FindTheUnionOfArrays {
                 arr2[i] = myobj.nextInt();
             }
             obj.findUnion(arr1, arr2);
-            // ArrayList<Integer> Union = findUnion(arr1, arr2);
-            // for(int i=0; i<Union.size(); i++){
-            //     System.out.print(Union.get(i)+" ");
-            // }
-         }   
+            ArrayList<Integer> Union = findUnion(arr1, arr2);
+            for(int i=0; i<Union.size(); i++){
+                System.out.print(Union.get(i)+" ");
+            }
+        }  
 }

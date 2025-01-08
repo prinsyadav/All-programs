@@ -26,6 +26,7 @@ public class SecurityConfig{
                .build();
     }
 
+<<<<<<< Updated upstream
 //    @Bean
 //    public UserDetailsService userDetailsService(){
 //
@@ -46,3 +47,14 @@ public class SecurityConfig{
 //        return new InMemoryUserDetailsManager(user1, user2);
 //    }
 }
+=======
+    @Bean
+    public AuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
+        provider.setPasswordEncoder(NoOpPasswordEncoder.getInstance());
+        provider.setUserDetailsService(userDetails());
+        return provider;
+    }
+
+}
+>>>>>>> Stashed changes

@@ -21,7 +21,7 @@ const AddProduct = () => {
 
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
-    // setProduct({...product, image: e.target.files[0]})
+    setProduct({...product, image: e.target.files[0]})
   };
 
   const submitHandler = (event) => {
