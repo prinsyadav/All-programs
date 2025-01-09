@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d7c196e-e80c-4395-be5f-a5658de81160" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/DSA/ConsecutiveOnes.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/DSA/Hourglass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/DSA/Hourglass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/DSA/Hourglass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/DSA/Hourglass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/Networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/Networking/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/my-react-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/my-react-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/my-react-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/my-react-app/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/user-management-app/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/user-management-app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/user-management-app/src/components/AddUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/user-management-app/src/components/AddUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../React apps/user-management-app/src/components/UserList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../React apps/user-management-app/src/components/UserList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecEx/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/Controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/Controller/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/Controller/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/Controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/Controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/model/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/repo/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringSecEx/src/main/java/org/prince/springsecex/service/MyUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fulstack_basics/Frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fulstack_basics/Frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fulstack_basics/Frontend/src/components/UsersList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../fulstack_basics/Frontend/src/components/UsersList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springSecurity/src/main/java/org/prince/springsecurity/service/UserService.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;prinsyadav&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/prinsyadav/All-programs.git&quot;,
+    &quot;accountId&quot;: &quot;64fd5eaa-7f67-4efb-82a0-50dc124f13f4&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2qUZYfZUQs75QtBFDMPoVPwhoHI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.SimpleBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="SimpleBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="SimpleBackend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.prince.simplebackend.SimpleBackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.218" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.218" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d7c196e-e80c-4395-be5f-a5658de81160" name="Changes" comment="" />
+      <created>1734719162941</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734719162941</updated>
+      <workItem from="1734719164146" duration="7204000" />
+      <workItem from="1734756039287" duration="1598000" />
+      <workItem from="1734773022098" duration="3946000" />
+      <workItem from="1734813126583" duration="77000" />
+      <workItem from="1734848220098" duration="4375000" />
+      <workItem from="1734871158200" duration="2126000" />
+      <workItem from="1735065742410" duration="595000" />
+      <workItem from="1735068894642" duration="29000" />
+      <workItem from="1735106348700" duration="937000" />
+      <workItem from="1735107325857" duration="94000" />
+      <workItem from="1736002741830" duration="19000" />
+      <workItem from="1736099338587" duration="19000" />
+      <workItem from="1736141274637" duration="757000" />
+      <workItem from="1736276280467" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
